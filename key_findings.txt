@@ -1,0 +1,30 @@
+DATOS CLAVE PARA EL README ESTRATÉGICO:
+
+Periodo: enero 2019 a febrero 2025
+Total licitaciones procesadas: 807,597 registros únicos (1,065,033 en serie temporal)
+Archivos mensuales procesados: 74
+
+TOP OPORTUNIDADES (Índice de Oportunidad):
+1. OBRAS: IO=0.675 (Alta) - alto gasto + crecimiento
+2. VEHÍCULOS Y EQUIPAMIENTO: IO=0.590 (Alta) - crecimiento explosivo
+3. SERVICIOS FINANCIEROS: IO=0.300 (Media) - baja competencia (2.1 oferentes)
+
+BAJA COMPETENCIA:
+- Servicios Financieros: 2.1 oferentes promedio
+- Servicios Básicos e Info Pública: 2.2 oferentes
+- Servicios de Viajes: 2.4 oferentes
+
+TOP CATEGORÍAS POR GASTO:
+- Construcción y Mantenimiento: domina con amplio margen
+- Obras: segundo lugar
+- Obras MINVU: tercer lugar
+
+TOP 5 REGIONES:
+1. Metropolitana (concentra la mayor parte)
+2. Coquimbo
+3. Atacama
+4. Antofagasta
+5. Biobío
+
+NOTA: Los montos están en CLP. Los valores "MM CLP" del script son en realidad los montos divididos por 1e9.
+El monto total es ~72.7 cuatrillones CLP lo cual parece ser la suma de MontoLineaAdjudica sin deduplicar.

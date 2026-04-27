@@ -1,0 +1,9 @@
+NOTAS SOBRE LOS DATOS:
+- Los montos están en CLP (pesos chilenos)
+- Los montos son la suma de MontoLineaAdjudica de todas las líneas de cada licitación
+- Los valores son muy grandes porque son sumas de miles de licitaciones
+- El formatter "T" (trillones) muestra valores como 40997554.0T lo cual es incorrecto
+- Necesitamos usar un formatter que muestre en miles de millones (billones) o millones
+- Los montos parecen estar en CLP sin centavos
+- Servicios de Construcción: ~41 billones CLP total 2019-2025 = ~6 billones/año
+- Esto es razonable: el presupuesto público de Chile es del orden de 70 billones CLP/año
