@@ -1,100 +1,126 @@
-# Análisis del Mercado de Compras Públicas en Chile (2019-2025)
+# Análisis del Mercado de Compras Públicas en Chile (2019–2025)
 
-Este repositorio contiene un análisis completo del sistema de compras públicas de Chile, utilizando datos abiertos de **Mercado Público (ChileCompra)**. El objetivo es identificar patrones, tendencias y oportunidades de mercado a través de la exploración de datos de licitaciones desde 2019 hasta principios de 2025.
+[![Deploy to GitHub Pages](https://github.com/djwillichile/chile-public-procurement-analysis/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/djwillichile/chile-public-procurement-analysis/actions/workflows/deploy-pages.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## Resumen del Proyecto
+> **Sitio publicado:** [djwillichile.github.io/chile-public-procurement-analysis](https://djwillichile.github.io/chile-public-procurement-analysis/)
 
-El análisis se enfoca en responder preguntas clave para proveedores del Estado y analistas de políticas públicas:
+Análisis completo del sistema de compras públicas de Chile usando datos abiertos de **Mercado Público (ChileCompra)**. Identifica patrones, tendencias y oportunidades de mercado en 807.597 licitaciones (2019–2025).
 
-- ¿Cómo ha evolucionado el gasto público en los últimos años?
-- ¿Qué sectores y regiones concentran la mayor inversión?
-- ¿Qué categorías de productos o servicios son las más demandadas?
-- ¿Dónde existen oportunidades de mercado con alto potencial y baja competencia?
-- ¿Es posible predecir la demanda futura en ciertas categorías?
+## Pregunta de Investigación
+
+> ¿Qué sectores de productos o servicios muestran mayor crecimiento en la demanda del Estado chileno y representan oportunidades de negocio para proveedores?
 
 ## Características
 
-- **Pipeline de Datos Completo:** Desde la descarga y procesamiento de más de 30 GB de datos crudos hasta la generación de datasets analíticos limpios.
-- **Análisis Exploratorio Profundo:** Más de 10 visualizaciones profesionales que revelan patrones de gasto, estacionalidad y concentración de mercado.
-- **Índice de Oportunidad de Mercado:** Una métrica innovadora que combina gasto, crecimiento y competencia para rankear las categorías más atractivas.
-- **Modelamiento Predictivo:** Implementación de modelos de series de tiempo (Prophet) para pronosticar el gasto futuro.
-- **Código Reproducible:** Scripts de Python y un notebook Jupyter que documentan todo el proceso, permitiendo la verificación y extensión del análisis.
+- **Pipeline reproducible:** Descarga → Streaming ETL (30 GB+) → Limpieza → Features → Modelos → Visualización
+- **Índice de Oportunidad de Mercado:** Combina gasto, crecimiento y competencia para rankear categorías
+- **Modelamiento predictivo:** Prophet + XGBoost con horizonte 2025–2028
+- **12+ visualizaciones** profesionales incluyendo Sankey interactivo del flujo de inversión
+- **GitHub Pages:** Sitio web publicado automáticamente en cada push a `main`
 
 ## Estructura del Repositorio
 
 ```
-/chile-public-procurement-analysis
+chile-public-procurement-analysis/
 │
-├── data/
-│   ├── raw/          # (Vacío, los datos crudos se eliminan para ahorrar espacio)
-│   └── processed/    # Datasets limpios y agregados en formato Parquet
-│
-├── figures/          # Visualizaciones generadas por el análisis
+├── notebooks/
+│   └── chile_public_procurement_analysis.ipynb  ← Informe técnico principal
 │
 ├── src/
-│   ├── download_data.py       # Script para descargar datos masivos
-│   ├── process_streaming.py   # Script para procesar datos crudos en streaming
-│   ├── clean_data.py          # Script para limpieza y normalización
-│   ├── feature_engineering.py # Script para crear métricas e índices
-│   ├── modeling.py            # Script para modelamiento predictivo
-│   └── visualizations.py      # Script para generar todas las figuras
+│   ├── download_data.py        ← Descarga masiva desde ChileCompra (Azure Blob)
+│   ├── download_bulk.py        ← Descarga alternativa con manejo de errores
+│   ├── process_streaming.py    ← ETL en streaming (>15M registros)
+│   ├── clean_data.py           ← Limpieza y normalización de datos
+│   ├── feature_engineering.py  ← Métricas derivadas e Índice de Oportunidad
+│   ├── modeling.py             ← Prophet + XGBoost (pronóstico 2025–2028)
+│   ├── visualizations.py       ← 12+ figuras estáticas profesionales
+│   └── sankey_api.py           ← Sankey interactivo desde datos de la API
 │
-├── chilecompra_analysis.ipynb  # Notebook Jupyter con el informe completo del análisis
-├── README.md                   # Este archivo
-└── requirements.txt            # Dependencias del proyecto
+├── figures/                    ← Visualizaciones PNG + HTML interactivos
+│
+├── docs/                       ← Sitio GitHub Pages (landing + Sankey)
+│   ├── index.html
+│   └── sankey.html
+│
+├── data/
+│   ├── raw/                    ← Datos crudos (excluidos del repo por tamaño)
+│   └── processed/              ← Parquet procesados (excluidos del repo)
+│
+├── .github/workflows/
+│   └── deploy-pages.yml        ← CI/CD: build notebook → deploy GitHub Pages
+│
+└── requirements.txt
 ```
 
-## Cómo Usar este Repositorio
+## Hallazgos Clave
 
-1.  **Clonar el repositorio:**
-    ```bash
-    git clone <URL_DEL_REPOSITORIO>
-    cd chile-public-procurement-analysis
-    ```
+| # | Oportunidad | Índice | Por qué |
+|---|-------------|--------|---------|
+| 1 | **Obras** | 0.675 (Alta) | Alto gasto + crecimiento + moderada competencia |
+| 2 | **Vehículos y Equipamiento** | 0.590 (Alta) | Crecimiento explosivo reciente |
+| 3 | **Servicios Financieros** | 0.300 (Media) | Baja competencia (2.1 oferentes promedio) |
 
-2.  **Instalar dependencias:**
-    Se recomienda crear un entorno virtual.
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
-    ```
+- **Estacionalidad:** Gasto se acelera consistentemente en Q4 de cada año
+- **Concentración regional:** R. Metropolitana lidera; Coquimbo y Atacama destacan per cápita
+- **Pronóstico:** Estabilización del gasto con estacionalidad mantenida hasta 2028
 
-3.  **Re-generar los datos y el análisis (Opcional):**
-    Los scripts en la carpeta `src/` permiten reproducir todo el pipeline. La ejecución completa puede tardar varias horas y requiere una cantidad significativa de espacio en disco (>40 GB) durante el procesamiento.
+## Uso
 
-    ```bash
-    # (Opcional) Descargar datos crudos (¡Tarda mucho tiempo!)
-    # python3 src/download_bulk.py
+### Instalación
 
-    # Procesar datos, limpiar, generar features y visualizaciones
-    python3 src/process_streaming.py
-    python3 src/clean_data.py
-    python3 src/feature_engineering.py
-    python3 src/modeling.py
-    python3 src/visualizations.py
-    ```
+```bash
+git clone https://github.com/djwillichile/chile-public-procurement-analysis.git
+cd chile-public-procurement-analysis
+python3 -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+```
 
-4.  **Explorar el análisis:**
-    El notebook `chilecompra_analysis.ipynb` contiene el informe completo con todas las visualizaciones y conclusiones. Puede ser abierto con Jupyter Lab o Jupyter Notebook.
+### Ejecutar el pipeline completo
 
-    ```bash
-    jupyter lab chilecompra_analysis.ipynb
-    ```
+```bash
+# 1. Descargar datos (requiere ~40 GB de espacio y varias horas)
+python3 src/download_bulk.py
 
-## Conclusiones Clave
+# 2. Procesar, limpiar y generar features
+python3 src/process_streaming.py
+python3 src/clean_data.py
+python3 src/feature_engineering.py
 
-- **Fuerte Estacionalidad:** El gasto público se acelera consistentemente en el último trimestre del año.
-- **Concentración del Gasto:** El sector Salud y la Región Metropolitana son los principales focos de inversión.
-- **Oportunidades en Construcción:** El sector de `SERVICIOS DE CONSTRUCCIÓN Y MANTENIMIENTO` domina el gasto, pero el análisis de competencia y crecimiento revela nichos en otras áreas.
-- **Impacto COVID-19:** Se observa un pico de gasto anómalo en 2020, evidenciando la capacidad de respuesta del sistema de compras ante emergencias.
+# 3. Modelos predictivos y visualizaciones
+python3 src/modeling.py
+python3 src/visualizations.py
+
+# 4. Sankey interactivo desde API / datos procesados
+python3 src/sankey_api.py
+
+# 5. Explorar el informe
+jupyter lab notebooks/chile_public_procurement_analysis.ipynb
+```
+
+### Generar solo el Sankey
+
+```bash
+python3 src/sankey_api.py
+# → figures/sankey_flujo_api.html  (interactivo)
+# → figures/fig14_sankey_api.png   (estático)
+```
+
+## GitHub Pages (deploy automático)
+
+El sitio se publica automáticamente en cada push a `main` mediante GitHub Actions:
+1. Convierte el notebook a HTML con `nbconvert`
+2. Despliega `docs/` + `figures/` + el notebook HTML a GitHub Pages
+
+**Para activar GitHub Pages en tu fork:**
+1. Ve a `Settings → Pages`
+2. En *Source* selecciona **GitHub Actions**
+3. Haz un push a `main` — el workflow se ejecuta automáticamente
 
 ## Autor
 
-- **Guillermo Fuentes Jaque**
-  - Científico de Datos Geoespaciales
-  - Consultor Ambiental
+**Guillermo Fuentes Jaque** — Científico de Datos Geoespaciales / Consultor Ambiental
 
 ## Licencia
 
-Este proyecto se distribuye bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+MIT — ver [LICENSE](LICENSE)
