@@ -1,9 +1,7 @@
-# Data — solo ignorar archivos crudos dentro de data/, no globalmente
+# Data — solo ignorar archivos crudos (descargas masivas ~30GB)
 data/raw/**/*.csv
 data/raw/**/*.zip
 data/raw/**/*.gz
-data/processed/**/*.parquet
-data/processed/**/*.csv
 
 # Python
 __pycache__/
