@@ -1,0 +1,250 @@
+{
+  "organismos": [
+    {
+      "NombreOrganismo": "MINISTERIO DE OBRAS PUBLICAS DIREC CION GRAL DE OO PP DCYF",
+      "monto_total": 4.24584102146966e+18
+    },
+    {
+      "NombreOrganismo": "I MUNICIPALIDAD ESTACION CENTRAL",
+      "monto_total": 2.4287782261875715e+17
+    },
+    {
+      "NombreOrganismo": "I MUNICIPALIDAD DE LAUTARO",
+      "monto_total": 1.588876440563054e+16
+    },
+    {
+      "NombreOrganismo": "SUBSECRETARIA DEL MINISTERIO DE JUSTICIA",
+      "monto_total": 869276813126279.0
+    },
+    {
+      "NombreOrganismo": "I MUNICIPALIDAD DE FREIRE",
+      "monto_total": 313603143515677.0
+    },
+    {
+      "NombreOrganismo": "I MUNICIPALIDAD DE VICTORIA",
+      "monto_total": 84032517556197.0
+    },
+    {
+      "NombreOrganismo": "I MUNICIPALIDAD DE VILLA ALEMANA",
+      "monto_total": 60078089440543.0
+    },
+    {
+      "NombreOrganismo": "JUNTA NACIONAL DE AUXILIO ESCOLAR Y BECA",
+      "monto_total": 34926993124453.0
+    },
+    {
+      "NombreOrganismo": "SERVICIO NACIONAL PARA LA PREVENCION Y REHABILITACION DEL CONSUMO DE D",
+      "monto_total": 13430832367389.0
+    },
+    {
+      "NombreOrganismo": "DIRECCION DE LOGISTICA DE CARABINEROS",
+      "monto_total": 11331477678258.0
+    },
+    {
+      "NombreOrganismo": "SERVICIO DE SALUD HOSPITAL DE PICHIDEGUA",
+      "monto_total": 7809860791449.0
+    },
+    {
+      "NombreOrganismo": "CENTRAL DE ABASTECIMIENTO DEL SISTEMA NACIONAL DE SERVICIO DE SALUD",
+      "monto_total": 5304188712677.0
+    },
+    {
+      "NombreOrganismo": "CORP MUNIC EDUC SALUD Y ATENCION",
+      "monto_total": 4805827269247.0
+    },
+    {
+      "NombreOrganismo": "HOSPITAL CLINICO METROPOLITANO DE LA FLORIDA DOCTORA ELOISA DIAZ",
+      "monto_total": 3282799080865.0
+    },
+    {
+      "NombreOrganismo": "SERVICIO DE SALUD OCCIDENTE HOSPITAL SAN JUAN DE DIOS",
+      "monto_total": 3080795792616.0
+    }
+  ],
+  "categorias": [
+    {
+      "Rubro1": "OBRAS",
+      "monto_adjudicado": 4.0462844270403533e+18
+    },
+    {
+      "Rubro1": "VEHÍCULOS Y EQUIPAMIENTO EN GENERAL",
+      "monto_adjudicado": 2.4288949474569706e+17
+    },
+    {
+      "Rubro1": "CONSULTORIA",
+      "monto_adjudicado": 1.995562620203652e+17
+    },
+    {
+      "Rubro1": "SERVICIOS PROFESIONALES, ADMINISTRATIVOS Y CONSULTORÍAS DE GESTIÓN EMPRESARIAL",
+      "monto_adjudicado": 1.5955918787268172e+16
+    },
+    {
+      "Rubro1": "SERVICIOS FINANCIEROS, PENSIONES Y SEGUROS",
+      "monto_adjudicado": 869469973599943.0
+    },
+    {
+      "Rubro1": "MUEBLES, ACCESORIOS, ELECTRODOMÉSTICOS Y PRODUCTOS ELECTRÓNICOS",
+      "monto_adjudicado": 314195014971245.0
+    },
+    {
+      "Rubro1": "MEDICAMENTOS Y PRODUCTOS FARMACÉUTICOS",
+      "monto_adjudicado": 85283679879585.0
+    },
+    {
+      "Rubro1": "EQUIPAMIENTO Y SUMINISTROS MÉDICOS",
+      "monto_adjudicado": 32750835698772.0
+    },
+    {
+      "Rubro1": "ORGANIZACIONES Y CONSULTORÍAS POLÍTICAS, DEMOGRÁFICAS, ECONÓMICAS, SOCIALES Y DE ADMINISTRACIÓN PÚBLICA",
+      "monto_adjudicado": 25478759587072.0
+    },
+    {
+      "Rubro1": "ARTÍCULOS PARA ESTRUCTURAS, OBRAS Y CONSTRUCCIONES",
+      "monto_adjudicado": 19035978392068.0
+    },
+    {
+      "Rubro1": "SALUD, SERVICIOS SANITARIOS Y ALIMENTACIÓN",
+      "monto_adjudicado": 17949259892056.0
+    },
+    {
+      "Rubro1": "EQUIPAMIENTO PARA LABORATORIOS",
+      "monto_adjudicado": 13566096965850.0
+    },
+    {
+      "Rubro1": "PRODUCTOS DE PAPEL",
+      "monto_adjudicado": 10556456107372.0
+    },
+    {
+      "Rubro1": "SERVICIOS DE CONSTRUCCIÓN Y MANTENIMIENTO",
+      "monto_adjudicado": 5883324715127.0
+    },
+    {
+      "Rubro1": "SERVICIOS DE TRANSPORTE, ALMACENAJE Y CORREO",
+      "monto_adjudicado": 4588316205188.0
+    }
+  ],
+  "proveedores": [
+    {
+      "NombreProveedor": "CONSTRUCTORA RIO MAULE SPA",
+      "monto_total": 4.0462752476760417e+18
+    },
+    {
+      "NombreProveedor": "Garde-Corps Ltda",
+      "monto_total": 2.4287777706069805e+17
+    },
+    {
+      "NombreProveedor": "Crisosto Smith Arqtos. Ltda.",
+      "monto_total": 1.9955470350656586e+17
+    },
+    {
+      "NombreProveedor": "EVELYN DEL ROSARIO",
+      "monto_total": 1.5888703427727436e+16
+    },
+    {
+      "NombreProveedor": "Renta Nacional Compañía de Seguros Generales S.A.",
+      "monto_total": 869287120052021.0
+    },
+    {
+      "NombreProveedor": "ProHigiene Ltda",
+      "monto_total": 313571546403823.0
+    },
+    {
+      "NombreProveedor": "PETITDELICE AZ",
+      "monto_total": 60033021206581.0
+    },
+    {
+      "NombreProveedor": "Droguería Concepción Ltda",
+      "monto_total": 17325636255062.0
+    },
+    {
+      "NombreProveedor": "SCM",
+      "monto_total": 13436419267106.0
+    },
+    {
+      "NombreProveedor": "ETHON PHARMACEUTICALS SPA.",
+      "monto_total": 13156187011705.0
+    },
+    {
+      "NombreProveedor": "Caribean Pharma SpA",
+      "monto_total": 11216100125042.0
+    },
+    {
+      "NombreProveedor": "WINPHARM",
+      "monto_total": 9866150919513.0
+    },
+    {
+      "NombreProveedor": "SALAZAR ISRAEL Valdivia",
+      "monto_total": 9096396484912.0
+    },
+    {
+      "NombreProveedor": "Medikar Ltda",
+      "monto_total": 8707903089467.0
+    },
+    {
+      "NombreProveedor": "ADN FARMACÉUTICA",
+      "monto_total": 8609104934132.0
+    }
+  ],
+  "regiones": [
+    {
+      "RegionUnidad": "Región de Coquimbo ",
+      "monto_total": 4.0462801189762775e+18
+    },
+    {
+      "RegionUnidad": "Región Metropolitana de Santiago",
+      "monto_total": 2.4385269026835123e+17
+    },
+    {
+      "RegionUnidad": "Región de Tarapacá  ",
+      "monto_total": 1.9955676787602672e+17
+    },
+    {
+      "RegionUnidad": "Región de la Araucanía ",
+      "monto_total": 1.6292645583125176e+16
+    },
+    {
+      "RegionUnidad": "Región de Valparaíso ",
+      "monto_total": 69647998100247.0
+    },
+    {
+      "RegionUnidad": "Región de Los Ríos",
+      "monto_total": 14731960209090.0
+    },
+    {
+      "RegionUnidad": "Región del Libertador General Bernardo O´Higgins",
+      "monto_total": 12209252404314.0
+    },
+    {
+      "RegionUnidad": "Región del Biobío ",
+      "monto_total": 9812851331770.0
+    },
+    {
+      "RegionUnidad": "Región del Maule ",
+      "monto_total": 6661040756288.0
+    },
+    {
+      "RegionUnidad": "Región del Ñuble",
+      "monto_total": 6229206541019.0
+    },
+    {
+      "RegionUnidad": "Región de los Lagos ",
+      "monto_total": 6092852668173.0
+    },
+    {
+      "RegionUnidad": "Región de Antofagasta ",
+      "monto_total": 2917632747053.0
+    },
+    {
+      "RegionUnidad": "Región de Atacama ",
+      "monto_total": 2843687596147.0
+    },
+    {
+      "RegionUnidad": "Región de Magallanes y de la Antártica",
+      "monto_total": 2774633141361.0
+    },
+    {
+      "RegionUnidad": "Región Aysén del General Carlos Ibáñez del Campo",
+      "monto_total": 1296176683536.0
+    }
+  ]
+}
