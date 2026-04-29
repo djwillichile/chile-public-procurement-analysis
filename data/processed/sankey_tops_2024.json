@@ -2,31 +2,31 @@
   "organismos": [
     {
       "NombreOrganismo": "DIVISION LOGISTICA DEL EJERCITO",
-      "monto_total": 659206110662820.0
+      "monto_total": 659206358341572.0
     },
     {
       "NombreOrganismo": "CENTRAL DE ABASTECIMIENTO DEL SISTEMA NACIONAL DE SERVICIO DE SALUD",
-      "monto_total": 651081406662.0
+      "monto_total": 724357472123.0
     },
     {
       "NombreOrganismo": "MINISTERIO DE OBRAS PUBLICAS DIREC CION GRAL DE OO PP DCYF",
-      "monto_total": 130862516960.0
+      "monto_total": 132031304014.0
     },
     {
       "NombreOrganismo": "POLICIA DE INVESTIGACIONES DE CHILE",
-      "monto_total": 70926533659.0
+      "monto_total": 70997753659.0
     },
     {
       "NombreOrganismo": "COMPLEJO ASISTENCIAL DR. SOTERO DEL RIO",
-      "monto_total": 29775783845.0
+      "monto_total": 30714842204.0
     },
     {
       "NombreOrganismo": "ILUSTRE MUNICIPALIDAD DE PICHILEMU",
-      "monto_total": 22958853708.0
+      "monto_total": 22896662178.0
     },
     {
       "NombreOrganismo": "SERVICIO DE SALUD OCCIDENTE HOSPITAL SAN JUAN DE DIOS",
-      "monto_total": 22657870521.0
+      "monto_total": 22663305311.0
     },
     {
       "NombreOrganismo": "SERVICIO DE SALUD METROPOLITANO SUR ORIENTE",
@@ -34,11 +34,11 @@
     },
     {
       "NombreOrganismo": "DIRECCION DE LOGISTICA DE CARABINEROS",
-      "monto_total": 18771586133.0
+      "monto_total": 20707477015.0
     },
     {
       "NombreOrganismo": "SERVICIO DE SALUD ORIENTE HOSPITAL DEL SALVADOR",
-      "monto_total": 17402145138.0
+      "monto_total": 17566226925.0
     },
     {
       "NombreOrganismo": "I MUNICIPALIDAD DE LA FLORIDA",
@@ -46,11 +46,11 @@
     },
     {
       "NombreOrganismo": "SERVICIO DE SALUD NUBLE",
-      "monto_total": 15256457352.0
+      "monto_total": 15369507352.0
     },
     {
       "NombreOrganismo": "SERVICIO DE SALUD DEL MAULE HOSPITAL DE TALCA",
-      "monto_total": 15045311848.0
+      "monto_total": 15105311848.0
     },
     {
       "NombreOrganismo": "I MUNICIPALIDAD DE VITACURA",
@@ -64,63 +64,63 @@
   "categorias": [
     {
       "Rubro1": "SERVICIOS DE CONSTRUCCIÓN Y MANTENIMIENTO",
-      "monto_adjudicado": 659529286449414.0
+      "monto_adjudicado": 659531786906510.0
     },
     {
       "Rubro1": "MEDICAMENTOS Y PRODUCTOS FARMACÉUTICOS",
-      "monto_adjudicado": 662960784479.0
+      "monto_adjudicado": 737031140920.0
     },
     {
       "Rubro1": "EQUIPAMIENTO Y SUMINISTROS MÉDICOS",
-      "monto_adjudicado": 220349453988.0
+      "monto_adjudicado": 221256130272.0
     },
     {
       "Rubro1": "SERVICIOS PROFESIONALES, ADMINISTRATIVOS Y CONSULTORÍAS DE GESTIÓN EMPRESARIAL",
-      "monto_adjudicado": 111106112713.0
+      "monto_adjudicado": 113330392438.0
     },
     {
       "Rubro1": "SERVICIOS DE LIMPIEZA INDUSTRIAL",
-      "monto_adjudicado": 83858159145.0
+      "monto_adjudicado": 85175522840.0
     },
     {
       "Rubro1": "SALUD, SERVICIOS SANITARIOS Y ALIMENTACIÓN",
-      "monto_adjudicado": 82193559246.0
+      "monto_adjudicado": 82927639560.0
     },
     {
       "Rubro1": "COMBUSTIBLES, LUBRICANTES Y ANTICORROSIVOS",
-      "monto_adjudicado": 68532179620.0
+      "monto_adjudicado": 68594726120.0
     },
     {
       "Rubro1": "SERVICIOS DE DEFENSA NACIONAL, ORDEN PÚBLICO Y SEGURIDAD",
-      "monto_adjudicado": 61647660821.0
+      "monto_adjudicado": 61806952120.0
     },
     {
       "Rubro1": "SERVICIOS DE TRANSPORTE, ALMACENAJE Y CORREO",
-      "monto_adjudicado": 54676875464.0
+      "monto_adjudicado": 55543114299.0
     },
     {
       "Rubro1": "EQUIPAMIENTO PARA LABORATORIOS",
-      "monto_adjudicado": 45272250679.0
+      "monto_adjudicado": 45544567473.0
     },
     {
       "Rubro1": "TECNOLOGÍAS DE LA INFORMACIÓN, TELECOMUNICACIONES Y RADIODIFUSIÓN",
-      "monto_adjudicado": 40658764170.0
+      "monto_adjudicado": 40848590500.0
     },
     {
       "Rubro1": "OBRAS",
-      "monto_adjudicado": 38421360280.0
-    },
-    {
-      "Rubro1": "ARTÍCULOS PARA ESTRUCTURAS, OBRAS Y CONSTRUCCIONES",
-      "monto_adjudicado": 29087543064.0
+      "monto_adjudicado": 39003224108.0
     },
     {
       "Rubro1": "SERVICIOS BASADOS EN INGENIERÍA, CIENCIAS SOCIALES Y TECNOLOGÍA DE LA INFORMACIÓN",
-      "monto_adjudicado": 28729666153.0
+      "monto_adjudicado": 30500454338.0
     },
     {
       "Rubro1": "VEHÍCULOS Y EQUIPAMIENTO EN GENERAL",
-      "monto_adjudicado": 27869097311.0
+      "monto_adjudicado": 30347987411.0
+    },
+    {
+      "Rubro1": "ARTÍCULOS PARA ESTRUCTURAS, OBRAS Y CONSTRUCCIONES",
+      "monto_adjudicado": 29507291668.0
     }
   ],
   "proveedores": [
@@ -130,15 +130,19 @@
     },
     {
       "NombreProveedor": "Libra Chile S.A.",
-      "monto_total": 71764651930.0
+      "monto_total": 71965341925.0
     },
     {
-      "NombreProveedor": "ENTEL CHILE S.A.",
-      "monto_total": 58385124317.0
+      "NombreProveedor": "Novo Nordisk Farmaceutica Limitada",
+      "monto_total": 66862060694.0
     },
     {
       "NombreProveedor": "ENEX S.A.",
       "monto_total": 57866820001.0
+    },
+    {
+      "NombreProveedor": "ENTEL CHILE S.A.",
+      "monto_total": 57093088397.0
     },
     {
       "NombreProveedor": "2- Novofarma Service S.A. - Boehringer",
@@ -146,105 +150,101 @@
     },
     {
       "NombreProveedor": "CLINICAL MARKET",
-      "monto_total": 33357087095.0
+      "monto_total": 33407007095.0
     },
     {
       "NombreProveedor": "Ascend Laboratories SpA",
-      "monto_total": 27369593125.0
+      "monto_total": 27062955878.0
     },
     {
       "NombreProveedor": "SANOFI AVENTIS",
       "monto_total": 26054391562.0
     },
     {
-      "NombreProveedor": "NEOETHICALS CHILE SPA",
-      "monto_total": 24925112038.0
-    },
-    {
       "NombreProveedor": "ETHON PHARMACEUTICALS SPA.",
-      "monto_total": 23235579867.0
+      "monto_total": 23158774787.0
     },
     {
       "NombreProveedor": "Empresa Constructora Ecmovial Limitada",
-      "monto_total": 21460328843.0
-    },
-    {
-      "NombreProveedor": "Laboratorios Saval S.A",
-      "monto_total": 20600618639.0
+      "monto_total": 21642663048.0
     },
     {
       "NombreProveedor": "Johnson & Johnson MedTech",
-      "monto_total": 20391622821.0
+      "monto_total": 20595792375.0
     },
     {
-      "NombreProveedor": "Adium",
-      "monto_total": 17877892207.0
+      "NombreProveedor": "Laboratorios Saval S.A",
+      "monto_total": 20359396859.0
     },
     {
-      "NombreProveedor": "4- Novofarma Service S.A. - Axon-Pharma",
-      "monto_total": 16784631045.0
+      "NombreProveedor": "NEOETHICALS CHILE SPA",
+      "monto_total": 19886337196.0
+    },
+    {
+      "NombreProveedor": "Fresenius Kabi Chile Ltda.",
+      "monto_total": 18297028353.0
     }
   ],
   "regiones": [
     {
       "RegionUnidad": "Región de Arica y Parinacota",
-      "monto_total": 659221071325999.0
+      "monto_total": 659221298832523.0
     },
     {
       "RegionUnidad": "Región Metropolitana de Santiago",
-      "monto_total": 1289560396903.0
+      "monto_total": 1371666604809.0
     },
     {
       "RegionUnidad": "Región de Valparaíso",
-      "monto_total": 136638256115.0
+      "monto_total": 137579135109.0
     },
     {
       "RegionUnidad": "Región del Biobío",
-      "monto_total": 112809518277.0
+      "monto_total": 114858439267.0
     },
     {
       "RegionUnidad": "Región del Libertador General Bernardo O´Higgins",
-      "monto_total": 99343485176.0
+      "monto_total": 99943472384.0
     },
     {
       "RegionUnidad": "Región de la Araucanía",
-      "monto_total": 83874738363.0
+      "monto_total": 84988975113.0
     },
     {
       "RegionUnidad": "Región del Maule",
-      "monto_total": 76522780440.0
+      "monto_total": 78162194922.0
     },
     {
       "RegionUnidad": "Región de los Lagos",
-      "monto_total": 68248713251.0
+      "monto_total": 68579532286.0
     },
     {
       "RegionUnidad": "Región de Antofagasta",
-      "monto_total": 61480617650.0
+      "monto_total": 61848490730.0
     },
     {
       "RegionUnidad": "Región de Coquimbo",
-      "monto_total": 56275064900.0
+      "monto_total": 58603968401.0
     },
     {
       "RegionUnidad": "Región de Los Ríos",
-      "monto_total": 37591796835.0
+      "monto_total": 37576460609.0
     },
     {
       "RegionUnidad": "Región del Ñuble",
-      "monto_total": 35007023811.0
+      "monto_total": 36314595467.0
     },
     {
       "RegionUnidad": "Región de Atacama",
-      "monto_total": 30597095002.0
+      "monto_total": 31330578604.0
     },
     {
       "RegionUnidad": "Región de Tarapacá",
-      "monto_total": 28543731976.0
+      "monto_total": 28681853700.0
     },
     {
       "RegionUnidad": "Región Aysén del General Carlos Ibáñez del Campo",
-      "monto_total": 25912265559.0
+      "monto_total": 26080840588.0
     }
   ]
 }
