@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sankey — Flujo Inversión Pública Chile</title>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #f4f6f9;
+      padding: 1rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #00a0b0;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+    #sankey-plot {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+      padding: 1rem;
+    }
+    .legend-section {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+      background: white;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    }
+    .legend-group h4 {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #777;
+      margin-bottom: 0.5rem;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.88rem;
+      color: #333;
+      margin-bottom: 0.3rem;
+    }
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .note {
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <a class="back-link" href="index.html">← Volver al inicio</a>
+
+  <div id="sankey-plot"></div>
+
+  <div class="legend-section">
+    <div class="legend-group">
+      <h4>Sector Comprador</h4>
+      <div class="legend-item"><div class="legend-dot" style="background:#1565C0"></div>Salud</div><div class="legend-item"><div class="legend-dot" style="background:#2E7D32"></div>Min. Obras Públicas</div><div class="legend-item"><div class="legend-dot" style="background:#546E7A"></div>Municipalidades</div><div class="legend-item"><div class="legend-dot" style="background:#E65100"></div>FF.AA. y Defensa</div><div class="legend-item"><div class="legend-dot" style="background:#6A1B9A"></div>Educación</div><div class="legend-item"><div class="legend-dot" style="background:#37474F"></div>Otros Organismos</div>
+    </div>
+    <div class="legend-group">
+      <h4>Categoría de Licitación</h4>
+      <div class="legend-item"><div class="legend-dot" style="background:#0288D1"></div>Construcción y Mant.</div><div class="legend-item"><div class="legend-dot" style="background:#43A047"></div>Obras Públicas</div><div class="legend-item"><div class="legend-dot" style="background:#FB8C00"></div>Vehículos y Equip.</div><div class="legend-item"><div class="legend-dot" style="background:#8E24AA"></div>Servicios Varios</div>
+    </div>
+    <div class="legend-group">
+      <h4>Zona Geográfica</h4>
+      <div class="legend-item"><div class="legend-dot" style="background:#00838F"></div>R. Metropolitana</div><div class="legend-item"><div class="legend-dot" style="background:#F9A825"></div>Macrozona Norte</div><div class="legend-item"><div class="legend-dot" style="background:#AD1457"></div>Macrozona Centro</div><div class="legend-item"><div class="legend-dot" style="background:#37474F"></div>Macrozona Sur</div>
+    </div>
+    <p class="note">
+      Datos: ChileCompra / Mercado Público (2019–2025). Montos estimados en Miles de Millones CLP (MM CLP).
+    </p>
+  </div>
+
+  <script>
+    var sankey = {"type": "sankey", "orientation": "h", "arrangement": "snap", "node": {"pad": 20, "thickness": 28, "line": {"color": "rgba(255,255,255,0.8)", "width": 1}, "label": ["Educaci\u00f3n", "FF.AA. y Defensa", "Min. Obras P\u00fablicas", "Municipalidades", "Otros Organismos", "Salud", "Construcci\u00f3n y Mant.", "Obras P\u00fablicas", "Servicios Varios", "Veh\u00edculos y Equip.", "Macrozona Centro", "Macrozona Norte", "Macrozona Sur", "R. Metropolitana"], "color": ["#6A1B9A", "#E65100", "#2E7D32", "#546E7A", "#37474F", "#1565C0", "#0288D1", "#43A047", "#8E24AA", "#FB8C00", "#AD1457", "#F9A825", "#37474F", "#00838F"], "hovertemplate": "<b>%{label}</b><br>Flujo: %{value:.0f} MM CLP<extra></extra>"}, "link": {"source": [5, 6, 5, 9, 5, 8, 5, 9, 5, 6, 2, 7, 2, 7, 2, 6, 2, 6, 2, 7, 3, 7, 3, 7, 3, 6, 3, 6, 1, 9, 1, 9, 1, 6, 0, 6, 0, 8, 0, 6, 4, 7, 4, 8, 4, 8], "target": [6, 13, 9, 13, 8, 13, 9, 10, 6, 12, 7, 13, 7, 11, 6, 13, 6, 11, 7, 12, 7, 13, 7, 12, 6, 10, 6, 13, 9, 13, 9, 11, 6, 13, 6, 13, 8, 13, 6, 12, 7, 11, 8, 13, 8, 10], "value": [1200.0, 1200.0, 550.0, 550.0, 450.0, 450.0, 200.0, 200.0, 300.0, 300.0, 900.0, 900.0, 600.0, 600.0, 800.0, 800.0, 400.0, 400.0, 400.0, 400.0, 500.0, 500.0, 400.0, 400.0, 350.0, 350.0, 250.0, 250.0, 450.0, 450.0, 200.0, 200.0, 200.0, 200.0, 300.0, 300.0, 250.0, 250.0, 250.0, 250.0, 300.0, 300.0, 250.0, 250.0, 200.0, 200.0], "color": ["rgba(21,101,192,0.3)", "rgba(2,136,209,0.3)", "rgba(21,101,192,0.3)", "rgba(251,140,0,0.3)", "rgba(21,101,192,0.3)", "rgba(142,36,170,0.3)", "rgba(21,101,192,0.3)", "rgba(251,140,0,0.3)", "rgba(21,101,192,0.3)", "rgba(2,136,209,0.3)", "rgba(46,125,50,0.3)", "rgba(67,160,71,0.3)", "rgba(46,125,50,0.3)", "rgba(67,160,71,0.3)", "rgba(46,125,50,0.3)", "rgba(2,136,209,0.3)", "rgba(46,125,50,0.3)", "rgba(2,136,209,0.3)", "rgba(46,125,50,0.3)", "rgba(67,160,71,0.3)", "rgba(84,110,122,0.3)", "rgba(67,160,71,0.3)", "rgba(84,110,122,0.3)", "rgba(67,160,71,0.3)", "rgba(84,110,122,0.3)", "rgba(2,136,209,0.3)", "rgba(84,110,122,0.3)", "rgba(2,136,209,0.3)", "rgba(230,81,0,0.3)", "rgba(251,140,0,0.3)", "rgba(230,81,0,0.3)", "rgba(251,140,0,0.3)", "rgba(230,81,0,0.3)", "rgba(2,136,209,0.3)", "rgba(106,27,154,0.3)", "rgba(2,136,209,0.3)", "rgba(106,27,154,0.3)", "rgba(142,36,170,0.3)", "rgba(106,27,154,0.3)", "rgba(2,136,209,0.3)", "rgba(55,71,79,0.3)", "rgba(67,160,71,0.3)", "rgba(55,71,79,0.3)", "rgba(142,36,170,0.3)", "rgba(55,71,79,0.3)", "rgba(142,36,170,0.3)"], "hovertemplate": "%{source.label} \u2192 %{target.label}<br><b>%{value:.0f} MM CLP</b><extra></extra>"}};
+    var layout = {"title": {"text": "Flujo de Inversi\u00f3n P\u00fablica: Sector \u2192 Categor\u00eda \u2192 Regi\u00f3n<br><sub>Chile 2019\u20132025 \u00b7 Datos: Mercado P\u00fablico (ChileCompra) \u00b7 Montos en Miles de Millones CLP</sub>", "font": {"size": 18, "family": "Segoe UI, sans-serif"}, "x": 0.5, "xanchor": "center"}, "font": {"size": 13, "family": "Segoe UI, sans-serif", "color": "#2c3e50"}, "paper_bgcolor": "#f9fafb", "plot_bgcolor": "#f9fafb", "margin": {"l": 20, "r": 20, "t": 100, "b": 20}, "height": 620};
+    Plotly.newPlot('sankey-plot', [sankey], layout, {
+      responsive: true,
+      displayModeBar: true,
+      modeBarButtonsToRemove: ['lasso2d', 'select2d'],
+      displaylogo: false
+    });
+  </script>
+</body>
+</html>
