@@ -5,6 +5,13 @@ on:
     branches:
       - main
       - claude/github-pages-deployment-ObAw5
+    paths:
+      - "data/processed/**"
+      - "src/**"
+      - "notebooks/**"
+      - "docs/**"
+      - "figures/**"
+      - ".github/workflows/**"
   workflow_dispatch:
 
 permissions:
@@ -28,8 +35,16 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install nbconvert and Jupyter
-        run: pip install "nbconvert>=7.0" jupyter
+      - name: Install dependencies
+        run: |
+          pip install --quiet \
+            pandas numpy matplotlib seaborn pyarrow \
+            plotly requests \
+            "nbconvert>=7.0" jupyter
+
+      - name: Regenerar figuras desde parquets
+        run: python3 src/generar_figuras.py
+        continue-on-error: true
 
       - name: Prepare site output directory
         run: |

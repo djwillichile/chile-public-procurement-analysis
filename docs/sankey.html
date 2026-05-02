@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sankey — Flujo de Inversión Pública Chile</title>
+  <title>Sankey — Flujo de Compras Públicas Chile</title>
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -12,118 +12,62 @@
       background: #f4f6f9;
       padding: 1.25rem;
     }
-    header {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    header h1 {
-      font-size: 1.4rem;
-      color: #1a3a5c;
-      margin-bottom: 0.25rem;
-    }
-    header p {
-      font-size: 0.88rem;
-      color: #666;
-    }
+    header { text-align: center; margin-bottom: 1rem; }
+    header h1 { font-size: 1.4rem; color: #1a3a5c; margin-bottom: 0.25rem; }
+    header p { font-size: 0.88rem; color: #666; }
     .back-link {
-      display: inline-block;
-      margin-bottom: 0.75rem;
-      color: #00a0b0;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
+      display: inline-block; margin-bottom: 0.75rem;
+      color: #00a0b0; text-decoration: none; font-size: 0.9rem; font-weight: 500;
     }
     .back-link:hover { text-decoration: underline; }
     #sankey-plot {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.10);
-      padding: 0.5rem;
-      margin-bottom: 1rem;
+      background: white; border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.10); padding: 0.5rem; margin-bottom: 1rem;
     }
     .legend-section {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-      background: white;
-      border-radius: 12px;
-      padding: 1.25rem 1.5rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-      margin-bottom: 1rem;
+      display: flex; gap: 2rem; flex-wrap: wrap;
+      background: white; border-radius: 12px;
+      padding: 1.25rem 1.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.07); margin-bottom: 1rem;
     }
     .legend-group h4 {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #888;
-      margin-bottom: 0.4rem;
+      font-size: 0.75rem; text-transform: uppercase;
+      letter-spacing: 1px; color: #888; margin-bottom: 0.4rem;
     }
     .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.85rem;
-      color: #333;
-      margin-bottom: 0.25rem;
+      display: flex; align-items: center; gap: 0.4rem;
+      font-size: 0.85rem; color: #333; margin-bottom: 0.25rem;
     }
-    .legend-dot {
-      width: 13px;
-      height: 13px;
-      border-radius: 3px;
-      flex-shrink: 0;
-    }
-    .note {
-      margin-top: 0.75rem;
-      font-size: 0.78rem;
-      color: #999;
-      max-width: 400px;
-    }
+    .legend-dot { width: 13px; height: 13px; border-radius: 3px; flex-shrink: 0; }
+    .note { margin-top: 0.75rem; font-size: 0.78rem; color: #999; max-width: 480px; }
   </style>
 </head>
 <body>
-
   <a class="back-link" href="index.html">← Volver al análisis principal</a>
-
   <header>
-    <h1>Flujo de Inversión Pública: Sector Comprador → Categoría → Región</h1>
-    <p>
-      Chile 2019–2025 · Datos: Mercado Público (ChileCompra) ·
-      Montos en Miles de Millones CLP · Generado con <code>src/sankey_api.py</code>
-    </p>
+    <h1>Flujo de Compras Públicas: Sector Comprador → Categoría → Macrozona</h1>
+    <p>Chile 2019–2024 · Datos reales: 786,666 licitaciones · Mercado Público (ChileCompra)</p>
   </header>
-
   <div id="sankey-plot"></div>
-
   <div class="legend-section">
     <div class="legend-group">
       <h4>Sector Comprador (izquierda)</h4>
-      <div class="legend-item"><div class="legend-dot" style="background:#1565C0"></div>Salud</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#2E7D32"></div>Min. Obras Públicas</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#546E7A"></div>Municipalidades</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#E65100"></div>FF.AA. y Defensa</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#6A1B9A"></div>Educación</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#37474F"></div>Otros Organismos</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#546E7A"></div>Municipalidades</div><div class="legend-item"><div class="legend-dot" style="background:#1565C0"></div>Salud</div><div class="legend-item"><div class="legend-dot" style="background:#2E7D32"></div>Gob. Central y Univ.</div><div class="legend-item"><div class="legend-dot" style="background:#E65100"></div>FFAA y Defensa</div><div class="legend-item"><div class="legend-dot" style="background:#FB8C00"></div>Obras Públicas</div><div class="legend-item"><div class="legend-dot" style="background:#455A64"></div>Otros organismos</div>
     </div>
     <div class="legend-group">
       <h4>Categoría de Licitación (centro)</h4>
-      <div class="legend-item"><div class="legend-dot" style="background:#0288D1"></div>Construcción y Mant.</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#43A047"></div>Obras Públicas</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#FB8C00"></div>Vehículos y Equip.</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#8E24AA"></div>Servicios Varios</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#0288D1"></div>Serv. Construcción</div><div class="legend-item"><div class="legend-dot" style="background:#00ACC1"></div>Equip. Médico</div><div class="legend-item"><div class="legend-dot" style="background:#8E24AA"></div>Serv. Profesionales</div><div class="legend-item"><div class="legend-dot" style="background:#43A047"></div>Medicamentos</div><div class="legend-item"><div class="legend-dot" style="background:#F57C00"></div>Artículos p/ Obras</div><div class="legend-item"><div class="legend-dot" style="background:#78909C"></div>Otras categorías</div>
     </div>
     <div class="legend-group">
       <h4>Zona Geográfica (derecha)</h4>
-      <div class="legend-item"><div class="legend-dot" style="background:#00838F"></div>R. Metropolitana</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#F9A825"></div>Macrozona Norte</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#AD1457"></div>Macrozona Centro</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#455A64"></div>Macrozona Sur</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#F9A825"></div>Macrozona Norte</div><div class="legend-item"><div class="legend-dot" style="background:#AD1457"></div>Macrozona Centro</div><div class="legend-item"><div class="legend-dot" style="background:#00838F"></div>R. Metropolitana</div><div class="legend-item"><div class="legend-dot" style="background:#455A64"></div>Macrozona Sur</div>
     </div>
     <p class="note">
-      Valores representativos basados en el análisis de 807.597 licitaciones.
-      Para regenerar con datos actualizados ejecute: <code>python3 src/sankey_api.py</code>
+      Métrica: número de licitaciones (n_licitaciones). El ancho de cada banda es
+      proporcional a la cantidad de procesos de compra. Distribución sectorial y macrozona
+      basada en datos reales del parquet; flujos inter-nivel estimados con conocimiento
+      de dominio. Para regenerar: <code>python3 src/sankey_api.py</code>
     </p>
   </div>
-
   <script>
     var data = [{
       type: "sankey",
@@ -133,117 +77,32 @@
         pad: 22,
         thickness: 30,
         line: { color: "rgba(255,255,255,0.9)", width: 1 },
-        label: [
-          "Educación",
-          "FF.AA. y Defensa",
-          "Min. Obras Públicas",
-          "Municipalidades",
-          "Otros Organismos",
-          "Salud",
-          "Construcción y Mant.",
-          "Obras Públicas",
-          "Servicios Varios",
-          "Vehículos y Equip.",
-          "Macrozona Centro",
-          "Macrozona Norte",
-          "Macrozona Sur",
-          "R. Metropolitana"
-        ],
-        color: [
-          "#6A1B9A",
-          "#E65100",
-          "#2E7D32",
-          "#546E7A",
-          "#455A64",
-          "#1565C0",
-          "#0288D1",
-          "#43A047",
-          "#8E24AA",
-          "#FB8C00",
-          "#AD1457",
-          "#F9A825",
-          "#455A64",
-          "#00838F"
-        ],
-        hovertemplate: "<b>%{label}</b><br>Flujo total: %{value:.0f} MM CLP<extra></extra>"
+        label: ['Municipalidades', 'Salud', 'Gob. Central y Univ.', 'FFAA y Defensa', 'Obras Públicas', 'Otros organismos', 'Serv. Construcción', 'Equip. Médico', 'Serv. Profesionales', 'Medicamentos', 'Artículos p/ Obras', 'Otras categorías', 'Macrozona Norte', 'Macrozona Centro', 'R. Metropolitana', 'Macrozona Sur'],
+        color: ['#546E7A', '#1565C0', '#2E7D32', '#E65100', '#FB8C00', '#455A64', '#0288D1', '#00ACC1', '#8E24AA', '#43A047', '#F57C00', '#78909C', '#F9A825', '#AD1457', '#00838F', '#455A64'],
+        hovertemplate: "<b>%{label}</b><br>Flujo total: %{value:,.0f} licitaciones<extra></extra>"
       },
       link: {
-        source: [
-          0, 0,
-          1, 1,
-          2, 2,
-          3, 3,
-          4, 4,
-          5, 5, 5,
-          6, 6, 6, 6,
-          7, 7, 7,
-          8, 8,
-          9, 9, 9
-        ],
-        target: [
-          6, 8,
-          6, 9,
-          6, 7,
-          6, 7,
-          7, 8,
-          6, 8, 9,
-          10, 11, 12, 13,
-          11, 12, 13,
-          10, 13,
-          10, 11, 13
-        ],
-        value: [
-          550, 250,
-          200, 650,
-          1200, 1900,
-          600, 900,
-          300, 450,
-          1500, 450, 750,
-          350, 400, 550, 2750,
-          900, 800, 1400,
-          200, 950,
-          200, 200, 1000
-        ],
-        color: [
-          "rgba(106,27,154,0.28)", "rgba(106,27,154,0.28)",
-          "rgba(230,81,0,0.28)",   "rgba(230,81,0,0.28)",
-          "rgba(46,125,50,0.28)",  "rgba(46,125,50,0.28)",
-          "rgba(84,110,122,0.28)", "rgba(84,110,122,0.28)",
-          "rgba(69,90,100,0.28)",  "rgba(69,90,100,0.28)",
-          "rgba(21,101,192,0.28)", "rgba(21,101,192,0.28)", "rgba(21,101,192,0.28)",
-          "rgba(2,136,209,0.28)",  "rgba(2,136,209,0.28)",  "rgba(2,136,209,0.28)",  "rgba(2,136,209,0.28)",
-          "rgba(67,160,71,0.28)",  "rgba(67,160,71,0.28)",  "rgba(67,160,71,0.28)",
-          "rgba(142,36,170,0.28)", "rgba(142,36,170,0.28)",
-          "rgba(251,140,0,0.28)",  "rgba(251,140,0,0.28)",  "rgba(251,140,0,0.28)"
-        ],
-        hovertemplate: "%{source.label} → %{target.label}<br><b>%{value:.0f} MM CLP</b><extra></extra>"
+        source: [3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 4, 4, 4, 4, 1, 1, 1, 1, 1, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 11, 11, 11, 11],
+        target: [6, 7, 8, 9, 10, 11, 6, 7, 8, 10, 11, 6, 7, 8, 10, 11, 6, 8, 10, 11, 6, 7, 8, 9, 11, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 12, 13, 14, 15, 12, 13, 14, 15, 12, 13, 14, 15, 12, 13, 14, 15, 12, 13, 14, 15],
+        value:  [25250, 2886, 1443, 721, 7214, 34628, 4275, 2137, 6412, 2137, 91911, 32776, 4097, 40970, 16388, 315470, 16744, 5232, 6977, 5930, 2909, 58171, 4363, 43628, 36357, 882, 353, 3528, 353, 529, 11995, 9940, 16567, 21537, 34791, 6764, 14882, 22999, 22999, 6814, 13009, 20443, 21682, 4470, 9834, 15646, 14752, 4322, 6649, 8976, 13298, 59555, 104221, 143924, 188591],
+        color:  ['rgba(230,81,0,0.28)', 'rgba(230,81,0,0.28)', 'rgba(230,81,0,0.28)', 'rgba(230,81,0,0.28)', 'rgba(230,81,0,0.28)', 'rgba(230,81,0,0.28)', 'rgba(46,125,50,0.28)', 'rgba(46,125,50,0.28)', 'rgba(46,125,50,0.28)', 'rgba(46,125,50,0.28)', 'rgba(46,125,50,0.28)', 'rgba(84,110,122,0.28)', 'rgba(84,110,122,0.28)', 'rgba(84,110,122,0.28)', 'rgba(84,110,122,0.28)', 'rgba(84,110,122,0.28)', 'rgba(251,140,0,0.28)', 'rgba(251,140,0,0.28)', 'rgba(251,140,0,0.28)', 'rgba(251,140,0,0.28)', 'rgba(21,101,192,0.28)', 'rgba(21,101,192,0.28)', 'rgba(21,101,192,0.28)', 'rgba(21,101,192,0.28)', 'rgba(21,101,192,0.28)', 'rgba(69,90,100,0.28)', 'rgba(69,90,100,0.28)', 'rgba(69,90,100,0.28)', 'rgba(69,90,100,0.28)', 'rgba(69,90,100,0.28)', 'rgba(69,90,100,0.28)', 'rgba(2,136,209,0.28)', 'rgba(2,136,209,0.28)', 'rgba(2,136,209,0.28)', 'rgba(2,136,209,0.28)', 'rgba(0,172,193,0.28)', 'rgba(0,172,193,0.28)', 'rgba(0,172,193,0.28)', 'rgba(0,172,193,0.28)', 'rgba(142,36,170,0.28)', 'rgba(142,36,170,0.28)', 'rgba(142,36,170,0.28)', 'rgba(142,36,170,0.28)', 'rgba(67,160,71,0.28)', 'rgba(67,160,71,0.28)', 'rgba(67,160,71,0.28)', 'rgba(67,160,71,0.28)', 'rgba(245,124,0,0.28)', 'rgba(245,124,0,0.28)', 'rgba(245,124,0,0.28)', 'rgba(245,124,0,0.28)', 'rgba(120,144,156,0.28)', 'rgba(120,144,156,0.28)', 'rgba(120,144,156,0.28)', 'rgba(120,144,156,0.28)'],
+        hovertemplate: "%{source.label} → %{target.label}<br><b>%{value:,.0f} licitaciones</b><extra></extra>"
       }
     }];
-
     var layout = {
-      font: {
-        size: 12.5,
-        family: "'Segoe UI', system-ui, sans-serif",
-        color: "#2c3e50"
-      },
+      font: { size: 12.5, family: "'Segoe UI', system-ui, sans-serif", color: "#2c3e50" },
       paper_bgcolor: "white",
       plot_bgcolor: "white",
       margin: { l: 10, r: 10, t: 20, b: 10 },
-      height: 600
+      height: 620
     };
-
     Plotly.newPlot("sankey-plot", data, layout, {
       responsive: true,
       displayModeBar: true,
       modeBarButtonsToRemove: ["lasso2d", "select2d", "autoScale2d"],
       displaylogo: false,
-      toImageButtonOptions: {
-        format: "png",
-        filename: "sankey_chilecompra",
-        scale: 2
-      }
+      toImageButtonOptions: { format: "png", filename: "sankey_chilecompra", scale: 2 }
     });
   </script>
-
 </body>
 </html>
